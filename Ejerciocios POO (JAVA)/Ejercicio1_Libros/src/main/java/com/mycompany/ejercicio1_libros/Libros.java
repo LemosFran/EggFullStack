@@ -17,8 +17,18 @@ public class Libros {
     
     int isnb;
     String titulo;
-    String autor
+    String autor;
     int cantPaginas;
+
+    public Libros() {
+    }
+    // Constructor con todas las pag
+    public Libros(int isnb, String titulo, String autor, int cantPaginas) {
+        this.isnb = isnb;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.cantPaginas = cantPaginas;
+    }
     
     
 }
