@@ -46,8 +46,5 @@ public class Persona {
         this.dni = dni;
     }
 
-    public static void mostrarPersona(String nombre)
-    {
-        
-    }
+
 }

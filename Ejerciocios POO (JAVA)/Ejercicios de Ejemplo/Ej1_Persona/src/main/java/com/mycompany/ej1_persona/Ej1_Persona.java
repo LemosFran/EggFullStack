@@ -10,7 +10,11 @@ import Entidad.Persona;
  *
  * @author Usuario
  */
+
+
+
 public class Ej1_Persona {
+    
 
     public static void main(String[] args) {
         Persona persona1 = new Persona("Franco", "Lemos", 37300758);
