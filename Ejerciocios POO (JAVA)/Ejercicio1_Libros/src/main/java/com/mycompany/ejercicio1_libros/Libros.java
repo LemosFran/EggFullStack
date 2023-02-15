@@ -4,6 +4,8 @@
  */
 package com.mycompany.ejercicio1_libros;
 
+import java.util.Scanner;
+
 /**
  *
  * @author franc
@@ -30,5 +32,13 @@ public class Libros {
         this.cantPaginas = cantPaginas;
     }
     
-    
+    public void cargarLibro(int codigo, String tituloLibro, String nombreAutor, int numPaginas)
+    {
+        System.out.println("Ingrese la informacion del libro");
+        Scanner entradaLibro =new Scanner(System.in);
+        
+        codigo= entradaLibro.nextInt();
+        tituloLibro = entradaLibro.nextLine();
+        
+    }
 }
