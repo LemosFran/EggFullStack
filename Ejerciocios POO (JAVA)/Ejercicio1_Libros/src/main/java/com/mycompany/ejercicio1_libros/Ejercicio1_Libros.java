@@ -4,6 +4,8 @@
 
 package com.mycompany.ejercicio1_libros;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Usuario
@@ -18,6 +20,9 @@ numero de páginas.*/
 public class Ejercicio1_Libros {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Libros Libro1 = new Libros();
+        
+       Libro1.codLibros();
+        System.out.println(Libro1.toString());
     }
 }
