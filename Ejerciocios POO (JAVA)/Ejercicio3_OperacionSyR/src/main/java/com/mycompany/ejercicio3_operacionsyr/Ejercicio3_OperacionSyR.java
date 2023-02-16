@@ -28,7 +28,15 @@ una división por cero, el método devuelve 0 y se le informa al usuario el erro
 informa al usuario. Si no, se hace la división y se devuelve el resultado al main.*/
     
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+       Operacion op1 = new Operacion();
+       
+       op1.crearOperacion();
+       
+       op1.div();
+       op1.resta();
+       op1.suma();
+       op1.mult();
+       
     }
     //probando cambios
 }
