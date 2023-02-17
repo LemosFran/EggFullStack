@@ -31,6 +31,79 @@ public class Rctangulo {
         System.out.println("Ingrese la base del rectangulo");
         base += entRect.nextInt();
         
+        System.out.println("Ingrese la altura del rectangulo");
+        altura += entRect.nextInt();
         
     }
+    
+    /**
+     * constructor vacio
+     */
+    public Rctangulo() {
+    }
+    
+    /**
+     * constructor con parametros
+     * @param base
+     * @param altura
+     */
+        public Rctangulo(int base, int altura)
+        {
+            this.base = base;
+        this.altura = altura;
+        }
+
+    /**
+     * Getters & Setters
+     * @return 
+     */
+        
+    public int getBase() {
+        return base;
+    }
+
+    public void setBase(int base) {
+        this.base = base;
+    }
+
+    public int getAltura() {
+        return altura;
+    }
+
+  
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+
+    /**
+     * método calculador de superficie y perímetro
+     */
+    public void superficie() {
+        System.out.println("Este es la superficie: " + (base*altura));
+    }
+        
+        public void perimetro()
+        {
+            System.out.println("Este es la superficie: " + (base +altura)*2);
+        }
+    
+    /**
+     *Método para dibujar el rectangulo 
+     */
+        
+        public void dibujarRectangulo()
+        {
+            for (int i = 0; i < altura; i++) {
+            for (int j = 0; j < base; j++) {
+                if (i == 0 || i == altura - 1 || j == 0 || j == base - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        }
+        
+        
 }
