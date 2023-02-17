@@ -29,6 +29,21 @@ h) Método consultarDatos(): permitirá mostrar todos los datos de la cuenta*/
 public class Ejercicio5_CuentaBancaria {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Cuentas c1 = new Cuentas();
+        // si no se pone el cont vacio aca me salta error
+        //porque me pide rellenar los parametros
+        
+        System.out.println("");
+        
+        c1.ingresoDatos();
+        c1.agregarFondos();
+        c1.retirarFondos();
+//        c1.retiroExpress();
+//        c1.consultarSaldo();
+//        c1.consultarDatos();
+
+        System.out.println(c1.toString());
+
     }
+    
 }

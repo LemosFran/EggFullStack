@@ -33,6 +33,11 @@ public class Cuentas {
     private int numeroDeCuenta;
     private int dni;
     private double saldoActual;
+
+    public Cuentas() {
+    }
+    
+    
     
     //constructor
     public Cuentas(int numeroDeCuenta, int dni, int saldoActual) {
@@ -74,46 +79,54 @@ public class Cuentas {
     {
         Scanner ingDat = new Scanner(System.in);
         System.out.println("Ingrese el número de cuenta");
-        numeroDeCuenta += ingDat.nextInt();
+        numeroDeCuenta = ingDat.nextInt();
         
         
         System.out.println("Ingrese el número de DNI");
-        dni += ingDat.nextInt();
+        dni = ingDat.nextInt();
         
        
         System.out.println("Ingrese el monto a cargar en su cuenta");
-        saldoActual += ingDat.nextInt();
+        saldoActual = ingDat.nextInt();
     }
     
     /**
      * Método para ingresar dinero y sumarselo al saldoActual
      */
     
-    public void agregarFondos()
+    public void agregarFondos() // solucionado
     {
         Scanner addFondos = new Scanner(System.in);
         System.out.println("¿Cuanto dinero desea ingresar?");
         
-        System.out.println("Su nuevo saldo es: " + (saldoActual + addFondos.nextDouble()));
+        // con el saldoAct addfondo.nex aca entra en un bucle 
+        double sasasa = saldoActual + addFondos.nextDouble();
+        System.out.println("Su nuevo saldo es: " + sasasa);
+// de esta manera (con una variable) no me genera bucles de scanners
+        
+        
     }
-    
+        
     /**
      * Método retirar(double retiro): el método recibe una cantidad de dinero a retirar y se
 la restará al saldo actual. Si la cuenta no tiene la cantidad de dinero a retirar, se
 pondrá el saldo actual en 0.
      */
     
-    public void retirarFondos()
+    public void retirarFondos() 
     {
         Scanner retFon = new Scanner(System.in);
         System.out.println("¿Cuanto dinero desea retirar?");
         
-        if(retFon.nextDouble() > saldoActual)
+        if(retFon.nextDouble() < saldoActual)
         {
-            System.out.println("Fondos insuficientes");
+            double sasasaRetiro = saldoActual - retFon.nextDouble(); //error aca
+            System.out.println("Su saldo actual es: " + sasasaRetiro);
         }else
         {
-            System.out.println("Su saldo actual es: " + (saldoActual - retFon.nextDouble()));
+            System.out.println("Saldo insufuciente");
+            
+            
         }
     }
     
@@ -151,4 +164,11 @@ usuario no saque más del 20%.
     {
         System.out.println("Los datos de su cuenta sos: \n*NUMERO DE CUENTA: "+numeroDeCuenta + "\n DNI: "+dni+ "\n SALDO ACTUAL: $"+saldoActual);
     }
+
+    @Override
+    public String toString() {
+        return "Cuentas{" + "numeroDeCuenta=" + numeroDeCuenta + ", dni=" + dni + ", saldoActual=" + saldoActual + '}';
+    }
+    
+    
 }
