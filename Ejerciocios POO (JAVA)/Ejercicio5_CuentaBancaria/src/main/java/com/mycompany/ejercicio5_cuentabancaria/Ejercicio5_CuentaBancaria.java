@@ -1,7 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package com.mycompany.ejercicio5_cuentabancaria;
 
 /**
@@ -25,25 +24,33 @@ f)
 usuario no saque más del 20%.
 g) Método consultarSaldo(): permitirá consultar el saldo disponible en la cuenta.
 h) Método consultarDatos(): permitirá mostrar todos los datos de la cuenta*/
-
 public class Ejercicio5_CuentaBancaria {
 
     public static void main(String[] args) {
         Cuentas c1 = new Cuentas();
-        // si no se pone el cont vacio aca me salta error
+        // si no se pone el const vacio aca me salta error
         //porque me pide rellenar los parametros
-        
-        System.out.println("");
-        
-        c1.ingresoDatos();
-        c1.agregarFondos();
-        c1.retirarFondos();
-//        c1.retiroExpress();
-//        c1.consultarSaldo();
-//        c1.consultarDatos();
 
+        c1.ingresoDatos();
+        System.out.println();
+
+        c1.agregarFondos();
+        System.out.println();
+        
+        c1.retirarFondos();
+        System.out.println();
+        
+        c1.retiroExpress();
+        System.out.println();
+        
+        c1.consultarSaldo();
+        System.out.println();
+
+        c1.consultarDatos();
+        System.out.println();
+        
         System.out.println(c1.toString());
 
     }
-    
+
 }

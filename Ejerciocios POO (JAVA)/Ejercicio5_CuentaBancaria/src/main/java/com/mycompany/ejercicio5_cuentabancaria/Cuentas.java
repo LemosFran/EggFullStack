@@ -100,9 +100,10 @@ public class Cuentas {
         System.out.println("¿Cuanto dinero desea ingresar?");
         
         // con el saldoAct addfondo.nex aca entra en un bucle 
-        double sasasa = saldoActual + addFondos.nextDouble();
-        System.out.println("Su nuevo saldo es: " + sasasa);
-// de esta manera (con una variable) no me genera bucles de scanners
+        saldoActual += addFondos.nextDouble();
+        
+        System.out.println("Su nuevo saldo es: " + saldoActual);
+
         
         
     }
@@ -117,11 +118,13 @@ pondrá el saldo actual en 0.
     {
         Scanner retFon = new Scanner(System.in);
         System.out.println("¿Cuanto dinero desea retirar?");
+        double retiroFondos = retFon.nextDouble();
+        // con esta var se arregla el sobrecargo y bucle de scanners o lectores
         
-        if(retFon.nextDouble() < saldoActual)
+        if(retiroFondos < saldoActual)
         {
-            double sasasaRetiro = saldoActual - retFon.nextDouble(); //error aca
-            System.out.println("Su saldo actual es: " + sasasaRetiro);
+           saldoActual -= retiroFondos; 
+            System.out.println("Su saldo actual es: " + saldoActual);
         }else
         {
             System.out.println("Saldo insufuciente");
@@ -139,11 +142,13 @@ usuario no saque más del 20%.
     {
         Scanner rExp = new Scanner(System.in);
         System.out.println("¿Desea hacer un retiro express? \n 1.Si \n 2.Salir");
+        int porcent = rExp.nextByte();
         
-        if(rExp.nextInt() == 1)
+        if(porcent == 1)
         {
-            saldoActual = (20 * 100) / saldoActual;
-            System.out.println("su retiro fue de: $" + (20 * 100) / saldoActual );
+            double retPorc = (20 * saldoActual ) / 100 ;
+            saldoActual -= retPorc;
+            System.out.println("su retiro fue de: $"+ retPorc );
         }else if(rExp.nextInt() == 2)
         {
             System.out.println("No se realizara la extraccion express. Muchas gracias");
