@@ -4,6 +4,8 @@
  */
 package com.mycompany.ejercicio7_nesspreso;
 
+import java.util.Scanner;
+
 /**
  *
  * @author franc
@@ -35,6 +37,80 @@ Método agregarCafe(int): se le pide al usuario una cantidad de café, el métod
 recibe y se añade a la cafetera la cantidad de café indicada.*/
 
 public class Cafetera {
-    private int cantMaxima;
+    private int cantMaxima = 1000;
     private int cantActual;
+
+    //const vacio
+    public Cafetera() {
+    }
+    // const
+    public Cafetera(int cantMaxima, int cantActual) {
+        this.cantMaxima = cantMaxima;
+        this.cantActual = cantActual;
+    }
+
+    //getters & setters
+    
+    public int getCantMaxima() {
+        return cantMaxima;
+    }
+
+    public void setCantMaxima(int cantMaxima) {
+        this.cantMaxima = cantMaxima;
+    }
+
+    public int getCantActual() {
+        return cantActual;
+    }
+
+    public void setCantActual(int cantActual) {
+        this.cantActual = cantActual;
+    }
+    
+    // llenar taza
+    public void llenarCafetera()
+    {
+      cantActual = cantMaxima; 
+    }
+    
+    //servir taza
+    public void servirTaza()
+    {
+        Scanner infoT = new Scanner(System.in);
+        System.out.println("Ingrese el tamaño de la taza");
+        int taza = infoT.nextInt();
+        
+        if(taza > cantActual)
+        {
+            System.out.println("El cafe no alcanza para llenar la taza, en la taza se sirvió: " + cantActual);
+        }else
+        {
+            cantActual -= taza;
+        }
+    }
+    
+    public int vaciarCafetera()
+    {
+        cantActual = 0;
+        
+        return cantActual;
+    }
+    
+    public void agregarCafe()
+    {
+        Scanner entCaf = new Scanner(System.in);
+        System.out.println("Ingrese la cantidad de cafe a agregar a la cafetera");
+        int agCafe = entCaf.nextInt();
+        
+        agCafe += cantActual;
+        
+        if(cantActual > cantMaxima)
+        {
+            System.out.println("Lo que se quiere agregar excede la cantidad máxima");
+        }else
+        {
+            System.out.println("El cafe actual en la cafetera es de " + cantActual + " ml" );
+        }
+    }   
+    
 }

@@ -36,6 +36,8 @@ Método agregarCafe(int): se le pide al usuario una cantidad de café, el métod
 recibe y se añade a la cafetera la cantidad de café indicada.*/
     
     public static void main(String[] args) {
+        Cafetera Caf1 = new Cafetera();
         
+      
     }
 }
