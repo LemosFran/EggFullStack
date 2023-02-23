@@ -3,6 +3,7 @@
  */
 package com.mycompany.ejercicio8_fucstrings;
 
+import com.mycompany.ejercicio8_fucstrings.Servicios.cadenaServicio;
 import java.util.Scanner;
 
 /**
@@ -36,17 +37,35 @@ public class Ejercicio8_FucStrings {
 
     public static void main(String[] args) {
         Cadena c1 = new Cadena();
-
+        
+        
         System.out.println("ingrese una frase");
         Scanner scan1 = new Scanner(System.in);
         String st1 = scan1.nextLine();
+        
+        cadenaServicio cs = new cadenaServicio();
+        
         
 //Asignacion de valores
         c1.setCadena1(st1);
         c1.setLongFrase(st1.length());
         
-//Impresion de valores Pruebas        
-        System.out.println(c1.getCadena1());
-        System.out.println(c1.getLongFrase());
+        c1.mostrarVocales();
+        c1.invertirFrase();
+        
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese una letra");
+        String letra = leer.nextLine();
+        c1.vecesRepetido(letra);
+        System.out.println("Ingrese otra frase");
+        c1.compararLongitud(leer.nextLine());
+        System.out.println("Ingrese nueva frase para unir");    
+        c1.unirFrases(leer.nextLine());
+        System.out.println("Ingrese caracter que reemplaza la letra 'a' ");
+        c1.reemplazar(leer.nextLine());
+        System.out.println("Ingrese una letra para chequear que se encuentre");
+        String letra2 = leer.nextLine();
+        System.out.println(c1.contiene(letra2));
+        
     }
 }
