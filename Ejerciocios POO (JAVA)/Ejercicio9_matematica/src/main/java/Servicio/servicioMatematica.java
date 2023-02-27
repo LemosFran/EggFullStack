@@ -11,7 +11,19 @@ import Entidad.Matematica;
  * @author franc
  */
 public class servicioMatematica {
-    Matematica mat1 = new Matematica();
+    public Matematica creadorDeMundos(Matematica num1, Matematica num2)
+    {
+        //lo que se puede hacer es traer el valor del main y
+        //hacer el set desde aca
+        //guardar los aleatorios uno en cada variable para traerlos
+        Matematica m1 = new Matematica();
+        m1.getNumero1();
+        m1.getNumero2();
+        
+        System.out.println("nps: " + m1.getNumero1());
+        System.out.println("nps: " + m1.getNumero2());
+        return m1;
+    }
     
     public void mostrarMenor(Matematica num1, Matematica num2)
     {
