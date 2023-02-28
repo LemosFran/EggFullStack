@@ -24,8 +24,9 @@ public class Ejercicio12_CalcEdad {
        
         Date traerFecha = per1.getFechaNac();
         System.out.println(traerFecha);
-        System.out.println(per1.calcularEdad());
-        
+        per1.calcularEdad();
+        per1.mayorMenor();
+        System.out.println("Y su nombre es: " + per1.getNombre());
        
        
     }

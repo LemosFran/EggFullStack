@@ -13,9 +13,11 @@ import java.util.Scanner;
  */
 public class Persona {
 
-    String nombre;
-    Date fechaNac;
-
+    private String nombre;
+    private Date fechaNac; // no hace falta poner el tipo date
+    //con un int desde un date se puede hacer el set
+    private int edad;
+    
     public Persona() {
     }
 
@@ -38,6 +40,10 @@ public class Persona {
 
     public void setFechaNac(Date fechaNac) {
         this.fechaNac = fechaNac;
+    }
+    
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
     //Metodos
@@ -62,12 +68,30 @@ public class Persona {
         fechaNac = fecha;
     }
     
-    public int calcularEdad()
+    public void calcularEdad()
     {
         Date fechaActual = new Date();
         
-        int claculoFecha = fechaNac.getYear() - fechaActual.getYear();
-         
-        return calculoFecha;
+        long claculoFecha = fechaActual.getYear() - fechaNac.getYear() -1;
+        //long calcms = claculoFecha / 1000 / 60 / 60 / 24 / 365;
+       
+        System.out.println(claculoFecha); 
+        
     }
+    
+    public void mayorMenor()
+    {
+        Date fechaActual = new Date();
+        
+        long claculoFecha1 = fechaActual.getYear() - fechaNac.getYear() -1;
+        
+        if(claculoFecha1 < 18)
+        {
+            System.out.println("Menor de edad");
+        }else 
+        {
+            System.out.println("Mayor de edad");
+        }
+    }
+    
 }
