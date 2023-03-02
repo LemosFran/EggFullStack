@@ -4,6 +4,8 @@
  */
 package Entidad;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Usuario
@@ -74,6 +76,11 @@ public class Movil {
     public void setCodigo(int[] codigo) {
         this.codigo = codigo;
     }
+
+    @Override
+    public String toString() {
+        return "Movil{" + "marca=" + marca + ", precio=" + precio + ", modelo=" + modelo + ", memoriaRam=" + memoriaRam + ", almacenamiento=" + almacenamiento + " codigo=" +  Arrays.toString(codigo) + '}';
+    }//se debe importar el arrays
     
     
     

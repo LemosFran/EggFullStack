@@ -18,8 +18,18 @@ public class Ejercicio14_TiendaCelulares {
         servicioMovil sM = new servicioMovil();
         Movil mov1 = sM.cargarCelular(); // se debe instanciar 
         //para que no me marque null
+     
+        // bueno listo, mejorar
+        //pasar a papel las estructuras basicas
         
-        sM.cargarCelular();
         System.out.println("la marca es: "+mov1.getMarca());
+        
+            System.out.println();
+            System.out.println(mov1.toString());
+            
+            
+            
+            
+        
     }
 }
