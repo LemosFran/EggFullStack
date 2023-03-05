@@ -38,9 +38,9 @@ public class servicioMovil {
     
     Scanner scan = new Scanner(System.in).useDelimiter("\n");
     
-    public Movil cargarCelular()
+    public Movil cargarCelular() //no iporta si declaras el Movil em la func
     { 
-        Movil m1 = new Movil();
+        Movil m1 = new Movil();// aca se vuelve a declarar
         System.out.println("Ingrese la marca del celular"); 
         m1.setMarca(scan.nextLine());
         System.out.println("Ingrese el precio");
