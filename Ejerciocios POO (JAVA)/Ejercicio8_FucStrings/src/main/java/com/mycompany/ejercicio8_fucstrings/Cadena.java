@@ -67,7 +67,7 @@ public class Cadena {
         
         int contador = 0;
         
-        for(int i=0; i < longFrase; i++)
+        for(int i=0; i < longFrase; i++) //como imprimir letra por letra mientras este repetida
         {
             char letra = cadena1.charAt(i);
             

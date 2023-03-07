@@ -46,7 +46,7 @@ public class Persona {
         this.edad = edad;
     }
 
-    //Metodos
+    //Metodos HACER BIEN Y PASAR AL CUADERNO DE COMO SETEAR UN ATRIB MAIN
     public void crearPersona() {
 
         Scanner scan = new Scanner(System.in);
