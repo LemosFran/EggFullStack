@@ -11,16 +11,14 @@ import java.util.Arrays;
  * @author Usuario
  */
 public class Ahorcado {
-    private String [] palabraBuscada;
+    private String [] palabraBuscada = new String[0]; //palabraBuscada = new String[tamaño];
+//HACER UN EJEMPLO APARTE SOLO DE ESTO
     private int longVector, jugadasMax, letEncontradas;
 
     public Ahorcado() {
     }
 
-    
-    
-    public Ahorcado(String[] palabraBuscada, int longVector, int jugadasMax, int letEncontradas) {
-        this.palabraBuscada = palabraBuscada;
+    public Ahorcado(int longVector, int jugadasMax, int letEncontradas) {
         this.longVector = longVector;
         this.jugadasMax = jugadasMax;
         this.letEncontradas = letEncontradas;
@@ -57,6 +55,10 @@ public class Ahorcado {
     public void setLetEncontradas(int letEncontradas) {
         this.letEncontradas = letEncontradas;
     }
+
+    
+    
+   
 
    @Override
 public String toString() {

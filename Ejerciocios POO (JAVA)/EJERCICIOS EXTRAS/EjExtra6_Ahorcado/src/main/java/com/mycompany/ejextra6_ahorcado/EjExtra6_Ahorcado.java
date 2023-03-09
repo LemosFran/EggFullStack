@@ -17,7 +17,8 @@ public class EjExtra6_Ahorcado {
         Ahorcado ah = new Ahorcado();
         
         sa.crearJuego(ah);
-        System.out.println(sa.toString());
+        System.out.println(ah.toString());
+        
         //puedo imprimirlo directamente llamando a la func
         //es totalmente al  pedo, hacerlo mas simple
 

@@ -7,6 +7,7 @@ import Entidad.NIF;
 /**
  *
  * @author franc
+ * documentar todo (buena paractica)
  */
 public class servicioNIF {
   public int crearNIF(NIF en)
