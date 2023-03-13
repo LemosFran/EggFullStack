@@ -41,25 +41,74 @@ máximas, el valor que ingresó el usuario y encontradas en 0.*/
         a.setJugadasMax(scan.nextInt());
 
         //tratar de imprimir los elementos del array uno por uno 
-       // int contador = 0; da cero por que se le asigno un valor ya
-        
+        // int contador = 0; da cero por que se le asigno un valor ya
         //seteo la dimension de la palabra
         a.setLongVector(a.getPalabraBuscada()[0].length()); //pasar al cuaderno
 
         //cuento la letra letra por letra dento de la cantidad de espacios que tiene el array
         for (int i = 0; i < a.getPalabraBuscada()[0].length(); i++) {
             char letra = a.getPalabraBuscada()[0].charAt(i);
-            System.out.print(letra + " ");
+           // System.out.print(letra + " ");
             //contador++;
             //PROBAR EL DEBUGGER CONSOLE
         }
+        
+        
 
 //guarda en cantidad de jugadas
 //máximas, el valor que ingresó el usuario y encontradas en 0.
 //pedir las letras
-     // System.out.println("el contador es: "+contador); //prueba
-        return a;
+        int contLetras = 0;
+        boolean boolEnc = false;
+        int palaNo = 0;
+        int encon =0;
+        while(contLetras != a.getJugadasMax())
+        {
+            System.out.println("Ingrese una letra");
+            String let = scan.next();
+            contLetras++;
+            
+             boolEnc = false; // reiniciar boolEnc a false aca estaba el error
+             //ver que onda
+            
+             for(int i=0; i<a.getPalabraBuscada()[0].length(); i++)
+        {
+                       
+            System.out.println("palabras no encontradas: "+palaNo);
+            System.out.println("palabras si encontradas: "+encon);
+            if(let.equals(Character.toString(a.getPalabraBuscada()[0].charAt(i))))
+                //ASI SE COMPARA UNA LETRA ING Y EL RECORRIDO DE LETRA POR LETRA DENTRO DE UN ARRAY
+            {
+                boolEnc = true;
+                System.out.println("la letra estaba");
+                encon++;
+                break;
+               
+            }if(!boolEnc)
+            {
+                System.out.println("esa letra no estaba");
+                palaNo++;
+                break;
+                
+            }// hay un error
+            
+        }//SI LA LETRA NO ES IGUAL AL RECUENTO DE CHAR CON EL FOR SUMAR A UN CONTADOR
+        //DE LETRAS ERRADAS
+        
+        
+       
+        }
+        
+// pedir letras mientras dure la cantidad de palabras erradas
+            // System.out.println("el contador es: "+contador); //prueba
+            return a;
 
+    }
+
+    public Ahorcado ingresarLetra(Ahorcado a) {
+        System.out.println("Ingrese la primer letra");
+
+        return null;
     }
 
 }
@@ -101,7 +150,7 @@ public Ahorcado crearJuego(Ahorcado a) {
 }
  */
 
-/*public Ahorcado crearJuego(Ahorcado a) {
+ /*public Ahorcado crearJuego(Ahorcado a) {
     Scanner scan = new Scanner(System.in);
 
     // Pide la palabra al usuario y crea un arreglo para guardarla letra por letra
@@ -128,4 +177,4 @@ public Ahorcado crearJuego(Ahorcado a) {
 
     return a;
 }
-*/
+ */
